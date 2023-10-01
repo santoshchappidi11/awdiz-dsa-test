@@ -22,20 +22,18 @@
 
 // Q2)------------------------------------------------------------->
 
-// let x = 241;
-// // Output:true
+// let x = 121;
+// Output:true
 
 // const checkIsPalindrome = (x) => {
-//   let stringX = x.toString();
+//   let palindromeString = x.toString();
 
-//   for (let i = 0; i < stringX.length; i++) {
-//     for (let j = stringX.length; j > 0; j--) {
-//       console.log(stringX[i], "front", stringX[j], "back");
-//       if (stringX[i] == stringX[j]) {
-//         // console.log(stringX[i], "front", stringX[j], "back");
-//         return true;
-//       }
-//     }
+//   let finalPalindrome = palindromeString.split("").reverse().join("");
+
+//   console.log(finalPalindrome);
+
+//   if (finalPalindrome == x) {
+//     return true;
 //   }
 
 //   return false;
@@ -63,6 +61,23 @@
 
 // Q4.----------------------------------------------------->
 
+// let x = "heh";
+// // Output:true
+
+// const checkIsPalindrome = (x) => {
+//   let finalPalindrome = x.split("").reverse().join("");
+
+//   console.log(finalPalindrome);
+
+//   if (finalPalindrome == x) {
+//     return true;
+//   }
+
+//   return false;
+// };
+
+// console.log(checkIsPalindrome(x));
+
 // Q5.------------------------------------------------------>
 // let nums = [7, 8, 9, 4, 5, 6];
 
@@ -80,12 +95,14 @@
 
 // Q6.--------------------------------------------------------->
 
-// let nums = [1, 5, 5, 3, 4];
+// let nums = [1, 5, 5, 5, 3, 4];
 
 // const removeDuplicates = (nums) => {
-//   for (let i = 0; i < nums.length; i++) {
+//   for (let i = 0; i < nums.length; ) {
 //     if (nums[i] == nums[i + 1]) {
-//       nums.splice(i, 2);
+//       nums.splice(i, 1);
+//     } else {
+//       i++;
 //     }
 //   }
 
@@ -96,7 +113,70 @@
 
 // console.log(removeDuplicates(nums));
 
+// Q7.----------------------------------------------------------------------->
+
+// let num = 5;
+
+// const findFactorial = (num) => {
+//   let sum = 1;
+
+//   if (num < 0) {
+//     return -1;
+//   }
+//   if (num == 0) {
+//     return 1;
+//   } else {
+//     for (let i = num; i >= 1; i--) {
+//       sum = sum * i;
+//     }
+//     return sum;
+//   }
+// };
+
+// console.log(findFactorial(num));
+
 // Q8.------------------------------------------------------------>
+
+// let primeNum = 3;
+
+// const checkIsPrime = (num) => {
+//   if (num < 2) {
+//     return false;
+//   }
+
+//   for (let i = 2; i < num; i++) {
+//     if (num % i == 0) {
+//       return false;
+//     }
+//   }
+
+//   return true;
+// };
+
+// console.log(checkIsPrime(primeNum));
+
+// Q9.----------------------------------------------------------->
+
+// let factNum = 5;
+
+// const findFactorial = (num) => {
+//   if (num < 0 || num < 1) {
+//     return 1;
+//   }
+
+//   let sum = 1;
+
+//   let i = num;
+
+//   while (i > 1) {
+//     sum = sum * i;
+//     i--;
+//   }
+
+//   return sum;
+// };
+
+// console.log(findFactorial(factNum));
 
 // Q10.----------------------------------------------------------->
 
@@ -130,7 +210,7 @@
 // Q12.--------------------------------------------------------------------------------->
 
 // let haystack = "sadbutsad";
-// let needle = "sad";
+// let needle = "bad";
 
 // const checkTheOccurence = (haystack, neddle) => {
 //   if (haystack.includes(neddle)) {
@@ -176,13 +256,9 @@
 // let X = "hello";
 
 // const removeDuplicateString = (X) => {
-//   for (let i = 0; i < X.length; i++) {
-//     if (X[i] == X[i + 1]) {
-//       console.log(true);
-//     }
-//   }
+//   const result = [...new Set(X)].join("");
 
-//   return X;
+//   return result;
 // };
 
 // console.log(removeDuplicateString(X));
